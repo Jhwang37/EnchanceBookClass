@@ -7,8 +7,18 @@ public class BookDB {
     private ArrayList<String> bookDBS = new ArrayList<>();
 
     public BookDB() {
+
+    }
+    public BookDB(String SKU){//Overloaded Constructor
         addToDB();
-        searchDB();
+//        searchDB();
+        for (String x : bookDBS) {
+            if (x.contains(SKU)) {
+                System.out.println(x);
+            } else {
+                continue;
+            }
+        }
     }
 
     public void searchDB() {
